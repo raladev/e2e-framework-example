@@ -1,0 +1,1 @@
+Example of Framework for e2e tests based on CodeceptJS
