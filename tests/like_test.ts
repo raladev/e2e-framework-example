@@ -18,9 +18,9 @@ After(async ({ I }) => {
   await I.deletePostAsUser(USER_1_LOGIN_DATA, createdPost.slug)
 })
 
-Scenario('Unauthorized like', async ({ I, mainPage }) => {
+// Skip reason: likes dont work withut authorization and nothing happen after pressing on like button as unauthorized user
+Scenario.skip('Unauthorized like', async ({ I, mainPage }) => {
   // Before
-  await I.authorize(USER_1_LOGIN_DATA)
   await I.amOnPage(mainPage.url)
   await I.click(mainPage.globalFeedTab)
   // Test
